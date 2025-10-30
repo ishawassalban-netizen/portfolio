@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #901b1b;
+  color: #ffffff;
+}
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('ptrofile.jpg'); /* Replace with your image file */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 5 5px;
+  position: relative;
+  z-index: 1;
+}
+#experience {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: left;
+  padding: 40px;
+}
+
+#about {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: left;
+  padding: 40px;
+}
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(38, 25, 25, 0.5); /* Optional dark overlay */
+  z-index: 0;
+}
+
+#home .intro-text,
+#home .description,
+#home .profile-pic {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #791a1a;
+  padding: 20px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* fixed box-shadow */
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  background-color: #791a1a;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #cccccc;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ff6600;
+}
+
+.website-button {
+  background-color: #ff6600;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.website-button:hover {
+  background-color: #e65c00;
+}
+
+/* NEW: Section visibility control */
+.content-section {
+  display: none;
+  padding: 70px 30px;
+  text-align: center;
+}
+
+/* Reuse your existing layout for visible sections */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 60px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.intro-text {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 18px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* NEW: CV section styles */
+.cv-preview {
+  width: 300px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.cv-button {
+  display: inline-block;
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cv-button:hover {
+  background-color: #7d390c;
+}
