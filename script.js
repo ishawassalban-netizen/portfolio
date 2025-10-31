@@ -1,8 +1,9 @@
 document.querySelectorAll('.nav-menu a').forEach(link => {
+  const targetId = link.getAttribute('data-target');
+  if (!targetId) return; // Skip links without data-target
+
   link.addEventListener('click', function (e) {
     e.preventDefault();
-    const targetId = this.getAttribute('data-target');
-    if (!targetId) return;
 
     document.querySelectorAll('.content-section').forEach(section => {
       section.style.display = 'none';
