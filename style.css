@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #cd5b5b;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #ff6600;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e46868;
+  padding: 20px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  background-color: #e46868;
+  padding: 20px 40px;;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #cccccc;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ff6600;
+}
+
+.website-button {
+  background-color: #ff6600;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.website-button:hover {
+  background-color: #a1490e;
+}
+
+.content-section {
+  display: none;
+  padding: 70px 30px;
+  text-align: center;
+}
+
+.content-section:target {
+  display: block;
+}
+
+/* Show home by default if no section is targeted */
+body:not(:has(:target)) #home {
+  display: block;
+}
+
+#home {
+  height: 100vh;
+  background-image: url('profile2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.home-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(38, 25, 25, 0.5);
+  z-index: 0;
+}
+
+#home .intro-text,
+#home .description,
+#home .profile-pic {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
